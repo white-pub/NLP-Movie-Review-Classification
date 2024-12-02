@@ -1,0 +1,4 @@
+/venv
+
+# Ignore the movie review dataset
+*.csv

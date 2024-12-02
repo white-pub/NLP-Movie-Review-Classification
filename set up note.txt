@@ -1,0 +1,132 @@
+=>Create a New Repository on GitHub
+=>Clone the Repository Using GitHub Desktop
+        stored the project on your local machine under C:\Users\...Github\folder name
+
+=>Navigate to the directory where the repository was cloned
+        cd path_name
+=>Create a Virtual Environment named venv
+        python -m venv venv
+=>Activate the virtual environment (on Windows)
+    🎀-----------------------🎀
+        venv\Scripts\activate
+    🎀-----------------------🎀
+        should see the (venv) in cmd
+
+    (🦄to deactivate the virtual environment, just type in
+            deactivate
+            or
+            venv\Scripts\deactivate
+    )
+
+=> Stay in the virtual environment, start installing needed packages
+If you run into errors and conflicts when installing packages, I recommend googling for solution, ask someone more expert in Python, or ask AI (like chatGPT or Microsoft copilot). 
+
+🍧Option 1:use requirement.txt (recommended)
+
+    ----
+    pip install -r requirements.txt
+    ----
+    This command installs all the packages listed in the requirements.txt file with the specified versions.
+
+🍧Option 2: install packages manually through pip. 
+1. Install the packages one by one
+    pip install package_name
+2. Install multiple packages at once
+    pip install package1 package2 package3 ...
+
+Install multiple package at once:
+    pip install pandas nltk scikit-learn wordcloud matplotlib seaborn jupyterlab 
+    pip install gensim transformers
+
+Breakdown:
+Jupyter lab
+    Highly recommended for its interactive environment which is great for data exploration and visualization.
+
+    pip install jupyterlab
+
+Pandas
+(For data processing, this will automatically include numpy)
+
+Matplotlib, Seaborn, and wordcloud
+(For data visualization)
+
+    pip install matplotlib seaborn wordcloud
+
+scikit-learn
+(for machine learning)
+
+    pip install scikit-learn
+
+gensim and transformers
+(for more advanced vectorization)
+
+    pip install gensim transformers
+
+---------------
+=>(optional) 
+  Save the installed packages to a requirements.txt file
+    
+    pip freeze > requirements.txt
+    
+    🐦It's a good practice for future reference! 
+-----------------------------------------
+
+!!! Generally not advisable to share the env folder
+=>In project directory, create a file named .gitignore.
+    🦄On windows, can stay in virtual environment and type. 
+    ------
+    echo. > .gitignore
+    ------
+    Note: This command does not work for windows PowerShell
+    
+=>Open the .gitignore file in any text editor (e.g., Notepad, VS Code) and add the paths or patterns you want to ignore.
+        In this case, just add 
+        -----
+        /venv
+        -----
+        inside the file (or /whatever_vertual_envirment_name )
+        save the file
+
+
+
+🍧🍧🍧🍧🍧🍧🍧
+To start using Jupyter notebook
+
+Because Jupyter Lab is installed in the venv, first be in the venv - should be a (venv) in start of line in cmd
+
+=> Open the Jupyter Lab environment.
+        Execute the command in cmd or windows powershell
+    🎀-----------------------🎀
+        jupyter-lab
+    🎀-----------------------🎀 
+        
+        Should open up a browser window with the Jupyter Lab interface.
+
+
+=> Creating a New Notebook
+        Click on the + button in the file browser panel or the File menu at the top and selecting New > Notebook.
+        Choose the Python kernel (e.g., Python 3) for your new notebook.
+
+        🦄 If the [] befor the cell is [*], it means its still executing.
+
+--------------------
+
+
+
+=>Make Initial Commit(for GitHub):
+    back to GitHub Desktop, check the changes made (e.g., the virtual environment folder, requirements.txt, etc.).
+    Add a commit message like "Initial commit with project setup".
+    🐦Click Commit to main.
+=>Push the Changes to GitHub:
+    After committing changes, 🐦click on "Push origin" in the top toolbar of GitHub Desktop to upload changes to GitHub.
+
+
+    ============
+🦄If the venv/ directory was previously tracked by Git (appeared in GitHub Desktop before), need to remove it from tracking manually:
+    (can stay in virtual environment) Type the following line to Clear Cached Files
+    git rm -r --cached venv/
+    Then commit this change, and it should no longer appear. (can verify from github webpage)
+
+🐦🐦🐦The virtual environment doesn't interfere with file operations like creating or editing files, so you can manage your project files without deactivating it.
+
+
