@@ -2,3 +2,6 @@
 
 # Ignore the movie review dataset
 *.csv
+
+# Ignore the individual txt files that hold the student written movie reviews
+/test data
