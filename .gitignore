@@ -5,3 +5,6 @@
 
 # Ignore the individual txt files that hold the student written movie reviews
 /test data
+
+# Ignore .ipynb_checkpoints
+/.ipynb_checkpoints
