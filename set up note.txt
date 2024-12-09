@@ -36,7 +36,7 @@ If you run into errors and conflicts when installing packages, I recommend googl
 
 Install multiple package at once:
     pip install pandas nltk scikit-learn wordcloud matplotlib seaborn jupyterlab 
-    pip install gensim transformers
+    pip install gensim 
 
 Breakdown:
 Jupyter lab
@@ -57,10 +57,10 @@ scikit-learn
 
     pip install scikit-learn
 
-gensim and transformers
+gensim
 (for more advanced vectorization)
 
-    pip install gensim transformers
+    pip install gensim
 
 ---------------
 =>(optional) 
